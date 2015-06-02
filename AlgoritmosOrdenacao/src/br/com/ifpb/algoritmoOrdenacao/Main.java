@@ -42,7 +42,6 @@ public class Main {
 		for (int i = 0; i < array.length; i++) {
 			array[i] = new Random().nextInt(10) * 3;
 		}
-
 		// ================================================================
 		System.out.println("--QuickSort--");
 		System.out.println("Array Desordenado: \n" + Arrays.toString(array));
@@ -53,6 +52,23 @@ public class Main {
 		for (int i = 0; i < array.length; i++) {
 			array[i] = new Random().nextInt(10) * 3;
 		}
+		// ================================================================
+		System.out.println("--SelectionSort--");
+		System.out.println("Array Desordenado: \n" + Arrays.toString(array));
+		SelectionSort selectionSort = new SelectionSort();
+		selectionSort.sort(array);
+		System.out.println("Array Ordenado: \n" + Arrays.toString(array) + "\n");
+		for (int i = 0; i < array.length; i++) {
+			array[i] = new Random().nextInt(10) * 3;
+		}
+		// ================================================================
+		System.out.println("--ShellSort--");
+		System.out.println("Array Desordenado: \n" + Arrays.toString(array));
+		ShellSort shellSort = new ShellSort();
+		shellSort.sort(array);
+		System.out.println("Array Ordenado: \n" + Arrays.toString(array) + "\n");
+		for (int i = 0; i < array.length; i++) {
+			array[i] = new Random().nextInt(10) * 3;
+		}
 	}
-
 }

@@ -1,5 +1,10 @@
 package br.com.ifpb.algoritmoOrdenacao;
 
+/**
+ * 
+ * @author Gilvonaldo
+ *
+ */
 public class InsertionSort implements Sort {
 
 	@Override
@@ -18,5 +23,4 @@ public class InsertionSort implements Sort {
 			}
 		}
 	}
-
 }

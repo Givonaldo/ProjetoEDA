@@ -1,44 +1,45 @@
 package br.com.ifpb.algoritmoOrdenacao;
 
+/**
+ * 
+ * @author Gilvonaldo
+ *
+ */
 public class QuickSort implements Sort {
 
 	public void quickSort(int array[], int posicaoInicial, int posicaoFinal) {
 
-		int esquerda = posicaoInicial;// "Contador esquerdo"
-		int direita = posicaoFinal;// "Contador direito"
+		int contEsquerdo = posicaoInicial;// "Contador esquerdo"
+		int contDireito = posicaoFinal;// "Contador direito"
 		int pivo = array[(posicaoInicial + posicaoFinal) / 2];
 		int troca;
 
-		while (esquerda <= direita) {
-
-			while (array[esquerda] < pivo) {
-				esquerda = esquerda + 1;
+		while (contEsquerdo <= contDireito) {
+			while (array[contEsquerdo] < pivo) {
+				contEsquerdo = contEsquerdo + 1;
 			}
-			while (array[direita] > pivo) {
-				direita = direita - 1;
+			while (array[contDireito] > pivo) {
+				contDireito = contDireito - 1;
 			}
-			if (esquerda <= direita) {
-				troca = array[esquerda];
-				array[esquerda] = array[direita];
-				array[direita] = troca;
-				esquerda = esquerda + 1;
-				direita = direita - 1;
+			if (contEsquerdo <= contDireito) {
+				troca = array[contEsquerdo];
+				array[contEsquerdo] = array[contDireito];
+				array[contDireito] = troca;
+				contEsquerdo = contEsquerdo + 1;
+				contDireito = contDireito - 1;
 			}
 		}
-
-		if (direita > posicaoInicial) {
-			quickSort(array, posicaoInicial, direita);// Chamada recursiva
+		if (contDireito > posicaoInicial) {
+			quickSort(array, posicaoInicial, contDireito);// Chamada recursiva
 		}
-		if (esquerda < posicaoFinal) {
-			quickSort(array, esquerda, posicaoFinal);// Chamada recursiva
+		if (contEsquerdo < posicaoFinal) {
+			quickSort(array, contEsquerdo, posicaoFinal);// Chamada recursiva
 		}
 	}
 	
 	@Override
 	public void sort(int[] array) {
-
 		quickSort(array, 0, array.length - 1);
-
 	}
 
 }

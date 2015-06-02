@@ -1,5 +1,10 @@
 package br.com.ifpb.algoritmoOrdenacao;
 
+/**
+ * 
+ * @author Gilvonaldo
+ *
+ */
 public class BubbleSort implements Sort {
 
 	public void sort(int[] v) {
@@ -19,5 +24,4 @@ public class BubbleSort implements Sort {
 			}
 		}
 	}
-
 }
