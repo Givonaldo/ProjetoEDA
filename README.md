@@ -10,9 +10,9 @@ Implementação de 6 algoritmos de Ordenação:
 
 - Quick Sort 
 
-- Heap Sort 
+- Merge Sort
 
 - Selection Sort 
 
-- Radix Sort
+- Shell Sort
 
